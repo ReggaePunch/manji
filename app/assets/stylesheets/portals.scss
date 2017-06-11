@@ -1,3 +1,12 @@
 // Place all the styles related to the portals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: url(/images/top.jpg) center top / cover no-repeat fixed;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(/images/top.jpg);
+  }
+}
