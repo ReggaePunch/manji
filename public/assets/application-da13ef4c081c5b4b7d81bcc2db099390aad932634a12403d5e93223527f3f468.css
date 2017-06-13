@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* line 4, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+body {
+  background: url(/images/top.jpg) center top/cover no-repeat fixed;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 9, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+  body {
+    background-image: url(/images/top.jpg);
+  }
+}
+/*メニュー部分*/
+/* line 16, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+#ham-menu {
+  background-color: #000;
+  /*メニュー背景色*/
+  opacity: 0.8;
+  box-sizing: border-box;
+  width: 100%;
+  /*メニュー横幅①*/
+  padding: 10px 40px;
+  /*メニュー内部上下左右余白*/
+  position: fixed;
+  bottom: -200px;
+  /*メニュー横幅①と合わせる*/
+  left: 0;
+  transition: transform 0.3s linear 0s;
+  /*0.3s は変化するのにかかる時間*/
+  height: 300px;
+  z-index: 1000;
+}
+
+/*メニューアイコン部分は疑似要素で*/
+/* line 31, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+#ham-menu::before {
+  background-color: #000;
+  /*ボタン部分背景色*/
+  border-radius: 0 0 0 10px;
+  /*左下角丸*/
+  color: #FFF;
+  /*アイコン（フォント）色*/
+  content: "menu";
+  /*メニューアイコン*/
+  display: block;
+  font-size: 50px;
+  /*アイコン（フォント）サイズ*/
+  height: 50px;
+  line-height: 50px;
+  /*縦位置中央化*/
+  bottom: 100%;
+  text-align: center;
+  top: 0;
+  height: 50px;
+}
+
+/*透過背景部分*/
+/* line 47, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+#menu-background {
+  background-color: #000;
+  /*黒背景部分背景色*/
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.3s linear 0s;
+  /*0.3s は変化するのにかかる時間*/
+  width: 100%;
+  z-index: -1;
+}
+
+/*hover 時の処理*/
+/* line 61, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+#ham-menu:hover {
+  transform: translate(0, -200px);
+  /*メニュー横幅①と合わせる*/
+}
+
+/* line 65, /home/ubuntu/workspace/app/assets/stylesheets/portals.scss */
+#ham-menu:hover + #menu-background {
+  opacity: 0.5;
+  /*黒背景部分透過度*/
+  z-index: 999;
+}
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
