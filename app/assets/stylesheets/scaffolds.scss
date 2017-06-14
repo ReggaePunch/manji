@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: rgba(0,0,0,0);;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -19,10 +19,30 @@ pre {
 }
 
 a {
-  color: #000;
+  color: rgba(0,0,0,0); /*テキストは透過させる*/
 
-  &:visited {
-    color: #666;
+  &:visited {  
+   font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+   line-height: 1.1;
+   font-size: 10.5em;
+   font-weight: bold;
+   color: rgba(0,0,0,0); /*テキストは透過させる*/
+ 
+   background-image: url(/images/star.jpg); /*背景の画像*/
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed782f+0,f9315d+28,6130f4+100 */
+//background: #ed782f; /* Old browsers */
+//background: -moz-linear-gradient(top,  #ed782f 0%, #f9315d 28%, #6130f4 100%); /* FF3.6-15 */
+//background: -webkit-linear-gradient(top,  #ed782f 0%,#f9315d 28%,#6130f4 100%); /* Chrome10-25,Safari5.1-6 */
+//background: linear-gradient(to bottom,  #ed782f 0%,#f9315d 28%,#6130f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed782f', endColorstr='#6130f4',GradientType=0 ); /* IE6-9 */
+
+   -webkit-background-clip: text;  /*背景をテキストでマスクする*/
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
 
   &:hover {

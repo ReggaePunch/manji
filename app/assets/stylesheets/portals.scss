@@ -2,68 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background: url(/images/top.jpg) center top / cover no-repeat fixed;
+  background: #000//url(/images/top.jpg) center top / cover no-repeat fixed;
 }
 
 @media only screen and (max-width: 767px) {
   body {
-    background-image: url(/images/top.jpg);
+    background-image: #000;//url(/images/top.jpg);
+  width: 100%;
   }
 }
 
+#text{  
+   font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+   line-height: 1.1;
+   font-size: 14.5em;
+   font-weight: bold;
+   color: rgba(0,0,0,0); /*テキストは透過させる*/
+ 
+   background-image: url(/images/star.jpg); /*背景の画像*/
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed782f+0,f9315d+28,6130f4+100 */
+//background: #ed782f; /* Old browsers */
+//background: -moz-linear-gradient(top,  #ed782f 0%, #f9315d 28%, #6130f4 100%); /* FF3.6-15 */
+//background: -webkit-linear-gradient(top,  #ed782f 0%,#f9315d 28%,#6130f4 100%); /* Chrome10-25,Safari5.1-6 */
+//background: linear-gradient(to bottom,  #ed782f 0%,#f9315d 28%,#6130f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed782f', endColorstr='#6130f4',GradientType=0 ); /* IE6-9 */
 
-  /*メニュー部分*/
-#ham-menu {
-    background-color: #000; /*メニュー背景色*/
-    opacity: 0.8;
-    box-sizing: border-box;
-    width: 100%; /*メニュー横幅①*/
-    padding: 10px 40px; /*メニュー内部上下左右余白*/
-    position: fixed;
-    bottom: -200px; /*メニュー横幅①と合わせる*/
-    left: 0;
-    transition: transform 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
-    height: 300px;
-    z-index: 1000;
-}
-
-/*メニューアイコン部分は疑似要素で*/
-#ham-menu::before {
-    background-color: #000; /*ボタン部分背景色*/
-    border-radius: 0 0 0 10px; /*左下角丸*/
-    color: #FFF; /*アイコン（フォント）色*/
-    content: "menu"; /*メニューアイコン*/
-    display: block;
-    font-size: 50px; /*アイコン（フォント）サイズ*/
-    height: 50px;
-    line-height: 50px; /*縦位置中央化*/
-    bottom: 100%;
+   -webkit-background-clip: text;  /*背景をテキストでマスクする*/
     text-align: center;
     top: 0;
-    height: 50px;
-}
-
-/*透過背景部分*/
-#menu-background {
-    background-color: #000; /*黒背景部分背景色*/
-    display: block;
-    height: 100%;
-    opacity: 0;
-    position: fixed;
+    left: 0;
     right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#btn{  
+   font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+   line-height: 1.1;
+   font-size: 10.5em;
+   font-weight: bold;
+   color: rgba(0,0,0,0); /*テキストは透過させる*/
+ 
+   background-image: url(/images/star.jpg); /*背景の画像*/
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed782f+0,f9315d+28,6130f4+100 */
+//background: #ed782f; /* Old browsers */
+//background: -moz-linear-gradient(top,  #ed782f 0%, #f9315d 28%, #6130f4 100%); /* FF3.6-15 */
+//background: -webkit-linear-gradient(top,  #ed782f 0%,#f9315d 28%,#6130f4 100%); /* Chrome10-25,Safari5.1-6 */
+//background: linear-gradient(to bottom,  #ed782f 0%,#f9315d 28%,#6130f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed782f', endColorstr='#6130f4',GradientType=0 ); /* IE6-9 */
+
+   -webkit-background-clip: text;  /*背景をテキストでマスクする*/
+    text-align: center;
     top: 0;
-    transition: all 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
-    width: 100%;
-    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    
 }
-
-/*hover 時の処理*/
-#ham-menu:hover {
-    transform: translate(0,-200px); /*メニュー横幅①と合わせる*/
-}
-
-#ham-menu:hover + #menu-background {
-    opacity: 0.5; /*黒背景部分透過度*/
-    z-index: 999;
-}
-  
